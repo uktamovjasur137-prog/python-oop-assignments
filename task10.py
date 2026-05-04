@@ -4,18 +4,16 @@ class BankAccount:
         self.owner = owner
         self.balance = balance
 
-    def deposit(self):
-        summa = float(input('Pul miqdori: '))
-        if summa > 0:
-            self.balance += summa
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
             print(f"Yangi balans: {self.balance}")
         else:
             print('Notogri amal')
     
-    def withdraw(self):
-        summa = float(input('Pul miqdori: '))
-        if summa <= self.balance:
-            self.balance -= summa
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
             print(f"Yangi balans: {self.balance}")
         else:
             print("Balans yetarli emas")
